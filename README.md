@@ -13,7 +13,9 @@ Copies all files needed to restore Jira and Confluence. Files are saved to a "te
 
 ## Usage
 
-The easiest thing to do is move these to a crontab.
+Make sure you replace `[BUCKET]` in the scripts with the name of your s3 bucket.
+
+The easiest thing to do is move these scripts to a crontab.
 
 1. Copy files to a location like `/etc/cron.d/`
 2. `crontab -e`
