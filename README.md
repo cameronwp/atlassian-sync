@@ -2,7 +2,7 @@
 
 See [Jira backup suggestions](https://confluence.atlassian.com/adminjiraserver071/backing-up-data-802592964.html) and [Confluence backup suggestions](https://confluence.atlassian.com/doc/production-backup-strategy-38797389.html)
 
-Copies all files needed to restore Jira and Confluence. Files are saved to a "temporary" location and a "latest" location. Recommend setting s3 settings so that any files with a `temp` prefix expire at some later date to avoid being charged for storing old files. But the latest version should never disappear, so `sync_latest.sh` will move a "temp" file to a non-temp location to avoid expiration.
+Copies all files needed to restore Jira and Confluence. Files are saved to a "temporary" location and a "latest" location. Recommend setting s3 settings so that any files with a `temp` prefix expire at some later date to avoid being charged for storing old files. But the latest version should never disappear, so `sync_latest.sh` will move a "temp" file to a non-temp location to avoid expiration. Technically, you should be able to do this with the `--expires` flag, but in testing the flag did not seem to have an effect (and I gave up trying after about 5 mins because you can just as easily use the s3 console to get the same effect).
 
 ## Dependencies
 
