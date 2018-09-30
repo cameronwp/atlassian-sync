@@ -2,9 +2,9 @@
 
 # https://confluence.atlassian.com/doc/production-backup-strategy-38797389.html
 
-DB_DUMP=$(date +db_%Y%m%d%H%M.gz)
-ATTACHMENTS_DIR_ZIP=$(date +attachments_%Y%m%d%H%M.tar.gz)
-CFG_ZIP=$(date +cfg_%Y%m%d%H%M.tar.gz)
+DB_DUMP=$(date +db_%Y%m%d.gz)
+ATTACHMENTS_DIR_ZIP=$(date +attachments_%Y%m%d.tar.gz)
+CFG_ZIP=$(date +cfg_%Y%m%d.tar.gz)
 
 # For whatever reason, ~/.local/bin/aws s3 is ignoring the --expires option. expiration is controlled in the console
 # ONE_MONTH_FROM_NOW=$(date -d "`date +%Y%m%d` +3 months" +"%Y-%m-%dT%H:%M:%SZ")
